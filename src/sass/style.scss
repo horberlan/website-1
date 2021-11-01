@@ -458,6 +458,7 @@ a {
     }
 
     .content {
+      z-index: 2;
       text-align: center;
       box-sizing: border-box;
       height: 100%;
@@ -493,7 +494,6 @@ a {
       line-height: 1.5;
       text-decoration: none;
     }
-    // @import "./linkswap.sass";
   }
 }
 
@@ -579,6 +579,7 @@ $viewer-distance: 5000px;
 
     img {
       width: 100%;
+      height: 400px;
       padding: 0 ($item-separation, 2);
       &:not(:first-of-type) {
         position: absolute;
@@ -591,7 +592,7 @@ $viewer-distance: 5000px;
   }
 
   nav {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     display: flex;
     top: 450px;
@@ -601,6 +602,7 @@ $viewer-distance: 5000px;
       // margin-top:400px;
       width: 43px;
       height: 43px;
+      
       cursor: pointer;
       color: transparent;
       letter-spacing: 1px;
@@ -633,7 +635,6 @@ $viewer-distance: 5000px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  // font
   font-family: Montserrat;
   color: #ffffff;
   font-weight: 300;
@@ -645,7 +646,7 @@ $viewer-distance: 5000px;
 
 
 .sidebar {
-  z-index: -1;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -653,7 +654,7 @@ $viewer-distance: 5000px;
 }
 
 .tab-btn {
-  z-index: -1;
+  z-index: 99;
   background-color: transparent;
   border: none;
   color: $primary_color;
@@ -668,7 +669,7 @@ $viewer-distance: 5000px;
 }
 
 .tab-btn-active {
-  z-index: -1;
+  z-index: 1;
   border-bottom: 2px solid #ffffff;
   color: #ffffff;
   font-weight: bold;
@@ -677,14 +678,14 @@ $viewer-distance: 5000px;
 /* tabs content */
 
 .content {
-  z-index: -1;
+  
   position: relative;
   width: 80%;
   top: 2rem;
 }
 
 .tab-content {
-  z-index: -1;
+  
   position: absolute;
   display: grid;
   flex-direction: column;
@@ -696,8 +697,9 @@ $viewer-distance: 5000px;
   top: 1rem;
   display: none;
   img {
-    width: 350px;
-    z-index: -1;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
   }
   button {
   
@@ -724,7 +726,7 @@ $viewer-distance: 5000px;
 }
 
 .tab-content {
-  z-index: 1;
+  
 
   textarea {
     font-family: Montserrat;
@@ -770,19 +772,17 @@ $viewer-distance: 5000px;
 
 // Equipe
 .grid_group {
-  z-index: -1;
+  
   display: grid;
   float: right;
   grid-template-columns: repeat(2, 191px);
   grid-template-rows: repeat(2, 145px);
   grid-column-gap: 100px;
   grid-row-gap: 100px;
-
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   width: 100%;
   height: 10px;
   position: absolute;
@@ -813,14 +813,6 @@ $viewer-distance: 5000px;
   grid-area: 2 / 2 / 3 / 3;
 }
 
-// .loading{
-//   // width: 100%;
-//   // height: 100%;
-//   background: 100% 100% #6a82ad;
-//   // background-color: #6a82ad;
-//   position: absolute;
-//   top: 50%;
-// }
 @media only screen and (min-width: 768px) {
   .grid_group{
     top: 100px;
@@ -934,7 +926,7 @@ body {
       // align-items: center;
   
     figure {
-      z-index: -1;
+      z-index: 1;
       position: relative;
       margin: 0;
       width: $item-width;
@@ -942,8 +934,9 @@ body {
       transition: transform 0.5s;
   
       img {
-        z-index: -1;
+        z-index: 1;
         width: 100%;
+        height: auto;
         padding: 0 ($item-separation, 2);
         &:not(:first-of-type) {
           
@@ -955,12 +948,12 @@ body {
       }
     }
   .nevsecond{
-    left:300px;
+    left:200px;
     top:-0px;
     z-index: 10;
   }
     nav {
-      z-index: -1;
+      z-index: 1;
       position: absolute;
       display: flex;
       top: 450px;
@@ -995,22 +988,6 @@ body {
 
 @media only screen and (max-width: 768px) {
   
-
-// skeleton config 
-
-.skeleton:empty {
-  width: 315px;
-  height: 250px; 
-  cursor: progress; 
-  background: 
-  linear-gradient(0.25turn, transparent, #fff, transparent),
-  linear-gradient(#eee, #eee),
-  radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
-  linear-gradient(#eee, #eee);
-  background-repeat: no-repeat;
-  animation: loading 1.5s infinite; // the animation transition 
-
-}
 
 @media only screen and (max-width: 980px) {
 
@@ -1190,4 +1167,3 @@ body {
     position:absolute;
   }
 }
-

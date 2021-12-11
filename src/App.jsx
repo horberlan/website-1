@@ -30,13 +30,13 @@ function App() {
     <BrowserRouter>
       <Switch>
     <div className="App">
-    <div id="websiteOverlay">
+    <div className="websiteOverlay">
       <Lottie options={Logo_animation}
                 height={520}
                 width={530}
                 style={{ left:"0", right:"0" }}
                 />
-     <p>wellcome to Lane art Design...</p>
+     <p>Wellcome to Lane art Design...</p>
     </div>
      <section id="pageA">
      
@@ -96,8 +96,7 @@ function App() {
           </div>
       </section>
       <section id="pageC">
-      <div className="grid_Second">
-      <div className="container_left div1">
+      <div className="container_left">
             <div className="UX" data-aos="fade-left">3D,2D ilustrações</div>
             <p>
               Animações e ilustrações personalizadas  para humanizar o seu negocio em suas mídias sociais.
@@ -105,7 +104,7 @@ function App() {
             <button className="btn"> Veja Mais</button>
             <button className="btn-or"> Orçamento</button>
       </div>
-      
+      <div className="grid_Second">
       <div>
         <div className="div2">
           <div className="carousel" id="carousel">

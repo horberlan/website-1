@@ -25,12 +25,11 @@
       
   }
 }
-#websiteOverlay{
-
+.websiteOverlay{
 text-align:center;
 align-items: center;
 position: fixed;
-background: linear-gradient(300deg,#4b87b5,#b03754);
+background: linear-gradient(300deg,#b03754,#4b87b5);
 background-size: 120% 120%;
 animation: gradient-animation 1.5s ease infinite;
 width:100vw;
@@ -126,7 +125,7 @@ a {
 
 .waterfall {
   z-index: -1;
-  width: 50rem;
+  width: 300px;
   height: 1900px;
   align-items: center;
   position: absolute;
@@ -134,40 +133,41 @@ a {
   left: 700px;
 
   .waterfall_drops {
-    position: absolute;
+    position: relative;
     border-radius: 20px;
     background: rgba(173, 184, 218, 0.7);
     animation: waterfall 2s linear infinite;
+    
 
     &._1 {
-      width: 0.6px;
+      width: 4px;
       height: 40px;
       left: 40px;
       top: 20px;
-      animation-delay: 1s;
-      animation-duration: 5s;
+      animation-delay: .2s;
+      animation-duration: 1s;
     }
 
     &._2 {
-      width: 0.5px;
+      width: 3px;
       height: 60px;
       left: 100px;
       top: 10px;
-      animation-delay: 1s;
-      animation-duration: 3s;
+      animation-delay: .2s;
+      animation-duration: 1s;
     }
 
     &._3 {
-      width: 0.6px;
+      width: 2px;
       height: 70px;
       left: 105px;
       top: 40px;
       animation-delay: 3s;
-      animation-duration: 4s;
+      animation-duration: 1s;
     }
 
     &._4 {
-      width: 0.5px;
+      width: 3.2px;
       height: 50px;
       left: 40px;
       top: 120px;
@@ -176,7 +176,7 @@ a {
     }
 
     &._5 {
-      width: 0.3px;
+      width: 3px;
       height: 30px;
       left: 60px;
       top: 20px;
@@ -193,7 +193,7 @@ a {
     }
 
     &._7 {
-      width: 0.7px;
+      width: 3.2px;
       height: 15px;
       left: 60px;
       top: 100px;
@@ -201,7 +201,7 @@ a {
     }
 
     &._8 {
-      width: 1px;
+      width: 2.7px;
       height: 4px;
       left: 67px;
       top: 300px;
@@ -209,7 +209,7 @@ a {
     }
 
     &._9 {
-      width: 0.8px;
+      width: 4px;
       height: 25px;
       left: 65px;
       top: 230px;
@@ -217,7 +217,7 @@ a {
     }
 
     &._10 {
-      width: 1px;
+      width: 3.6px;
       height: 42px;
       left: 60px;
       top: 330px;
@@ -248,7 +248,7 @@ a {
 
   .UX {
     // max-width: 200px;
-    width: 116px;
+    width: 456px;
     height: 220px;
     margin-top: 30px;
     text-align: left;
@@ -309,7 +309,7 @@ a {
 
   .UX {
     // max-width: 200px;
-    width: 116px;
+    width: 316px;
     height: 220px;
     margin-top: 30px;
     text-align: right;
@@ -333,7 +333,7 @@ a {
     transition-duration: 0.4s;
 
     &:hover {
-      opacity: 0.2;
+      opacity: 0.9;
       color: #ffffff;
     }
   }
@@ -408,7 +408,6 @@ a {
 }
 
 .container_grid {
-  margin-left: 30px;
   
   z-index: 4;
   position: relative;
@@ -435,12 +434,17 @@ a {
     align-items: flex-start;
     box-sizing: border-box;
     height: 700px;
+    flex: 1;
 
     .item {
       box-sizing: border-box;
       width: 50%;
       margin-bottom: 39px;
       padding: 0px 20px;
+      flex-wrap: wrap;
+      
+
+
     }
 
     .content {
@@ -702,7 +706,7 @@ $viewer-distance: 5000px;
   transition-duration: 0.4s;
 
     &:hover {
-      opacity: 0.2;
+      opacity: 0.9;
       color: #ffffff;
     }
   } 
@@ -837,7 +841,7 @@ body {
   transition-duration: 0.4s;
 
   &:hover {
-    opacity: 0.2;
+    opacity: 0.9;
     color: #ffffff;
   }
 }
@@ -878,31 +882,33 @@ body {
     color: #FFFFFF;
   }
 }
-
-
-// gird second
-
+.container_left{
+  float: left;
+}
 
 .grid_Second {
+  position: relative;
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-rows: 2fr;
   grid-column-gap: 400px;
   grid-row-gap: 20px;
+  
 
-  .div1 { grid-area: 1 / 1 / 2 / 2; }
   .div2 { 
-    grid-area: 1 / 2 / 2 / 3; 
-
+    // position:relative;
+    // left:0rem ;
+   float:right;
     .carousel {
+      left:880px;
       top:-580px;
       position: absolute;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: auto;
-      height: auto;
+      height: 700px;
       
       perspective: $viewer-distance; //muito importante
       overflow: hidden;
@@ -935,7 +941,7 @@ body {
       z-index: 1;
       position: absolute;
       display: flex;
-      // margin-top: -35px;
+      margin-top:31rem;
       left: 100px;
   
       button {
@@ -964,34 +970,32 @@ body {
 }
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 1080px) {
+  .waterfall{
+    position:absolute;
+    z-index: -1;
+    left:400px;
+  }
+}
+
   
 
 @media only screen and (max-width: 980px) {
-
-
-  // #pageA, #pageB, #pageC {
-  //   width: 680px;
-  // }
-
-  .grid_Second .div2 .carousel {
-    width: 70%;
-    margin-top:-120px;
-    // top:-50px;
-    & nav {
-      margin-top: 0px;
-      margin-left: -120px;
-      
-      
-    }
-  }  
+  
+.waterfall{
+position:relative;
+z-index: 0;
+  left:800px;
+}
   .carousel {
-    width: 70%;
-    height: 320px;
+    width: auto;
+    height: 720px;
     left: 100px;
+    top:-114rem;
   
     & nav{
-      margin-top:-200px;
+      margin-top:00px;
       margin-left: -90px;
     }
     & figure {
@@ -1018,10 +1022,10 @@ body {
   z-index: 2;
   position: relative;
   left: 60px;
-  top:0px;
+  top:-700px;
   width: 120px;
   height: 120px;
-  float: right;
+  
   
   p {
     font: normal normal normal 24px/28px Montserrat;
@@ -1057,7 +1061,7 @@ body {
     transition-duration: 0.4s;
 
     &:hover {
-      opacity: 0.2;
+      opacity: 0.9;
       color: #ffffff;
     }
   }
@@ -1103,19 +1107,36 @@ body {
   width: 60%;
 }
 
-}
-@media only screen and (max-width: 508px) {
- 
+
+@media only screen and (max-width: 580px) {
+  .container{
+    top:-90rem;
+    & p {
+      max-width: 300px;
+    }
+  }
+  .waterfall{z-index: -1;}
+ .Container_orcamento{
+  position: relative; 
+  top:-140px;
+  text-align: center;
+  right:55px;
+ }
+ .container_left{
+   & p {
+     max-width: 300px;
+   }
   .UX {
     // max-width: 200px;
     width: 200px;
     height: 160px;
-    margin-top: 30px;
+    margin-top: -120px !important;
     text-align: right;
     font:  normal normal normal 60px/60px Fredericka the Great;
     letter-spacing: 1px;
     color: #ffffff;
     opacity: 1;
+    
   }
 
   .btn {
@@ -1132,16 +1153,30 @@ body {
     transition-duration: 0.4s;
 
     &:hover {
-      opacity: 0.2;
+      opacity: 0.9;
       color: #ffffff;
     }
+    
   }
-  
-  
+}
+  .flexbox,.flexbox_right{
+    // flex-direction: column !important;
+    
+    & .item{
+      flex-direction: column !important;
+    }
+  }
   #suport {
     // left: -400px;
     top: 600px;
     left:-320px;
     position:absolute;
   }
-}
+  .carousel{
+    left:-10px;
+    & nav{
+      top:380px;
+      margin-left: 50px;
+    }
+  }
+  }

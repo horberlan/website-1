@@ -29,8 +29,9 @@ window.onload = function () {
 
             <header className="header" id="#nav">
                     <nav className="navbar navbar-fixed-top">
-                        <div href="#pageB" className="nav-logo"></div> 
-                        {/* <img id="myImage" src={logo}/> */}
+                        <div href="#pageB" className="nav-logo">
+                            </div> 
+                        
                         <ul className="nav-menu">
                             <li className="nav-item">
                                 <a href="#carousel">INICIO</a>
